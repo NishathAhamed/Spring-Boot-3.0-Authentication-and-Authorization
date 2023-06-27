@@ -23,13 +23,13 @@ public class ProductController {
         productService.regiterProduct(productRequest);
     }
 
-    @GetMapping("get-products")
+    @GetMapping("get-product/list")
     public List<ProductResponse> getProducts(){
 
        return productService.getProducts();
     }
 
-    @GetMapping("get-productById/{id}")
+    @GetMapping("get-product/{id}")
     public ProductResponse getProductById(@PathVariable Integer id){
 
         return productService.getProductById(id);
