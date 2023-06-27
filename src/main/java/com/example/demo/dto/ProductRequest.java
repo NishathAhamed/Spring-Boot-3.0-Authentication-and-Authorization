@@ -8,7 +8,7 @@ public class ProductRequest {
     private String productName;
     private Integer quantity;
 
-    public String getProductName() {
+    public String getProductName(){
         return productName;
     }
 
