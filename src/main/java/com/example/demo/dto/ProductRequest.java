@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductRequest {
 
-    private String productName;
+    private  String productName;
     private Integer quantity;
 
     public String getProductName() {
