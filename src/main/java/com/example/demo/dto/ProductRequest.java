@@ -3,7 +3,7 @@ package com.example.demo.dto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductRequest {
+public class ProductRequest{
 
     private String productName;
     private Integer quantity;
