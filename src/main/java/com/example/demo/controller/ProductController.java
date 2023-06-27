@@ -6,6 +6,7 @@ import com.example.demo.entity.Product;
 import com.example.demo.service.ProductService;
 import jakarta.persistence.Access;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,12 +25,14 @@ public class ProductController {
     }
 
     @GetMapping("get-product/list")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
     public List<ProductResponse> getProducts(){
 
        return productService.getProducts();
     }
 
     @GetMapping("get-product/{id}")
+    @PreAuthorize("hasAnyAuthority('ROLE_USER')")
     public ProductResponse getProductById(@PathVariable Integer id){
 
         return productService.getProductById(id);
